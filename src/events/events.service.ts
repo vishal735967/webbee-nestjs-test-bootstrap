@@ -8,7 +8,7 @@ export class EventsService {
   constructor(
     @InjectRepository(Event)
     private eventRepository: Repository<Event>,
-  ) {}
+  ) { }
 
   getWarmupEvents() {
     return this.eventRepository.find();
@@ -92,7 +92,7 @@ export class EventsService {
 
   @Get('events')
   async getEventsWithWorkshops() {
-    throw new Error('TODO task 1');
+    return this.eventRepository.find();
   }
 
   /*
